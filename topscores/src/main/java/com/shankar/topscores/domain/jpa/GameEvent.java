@@ -17,6 +17,13 @@ public class GameEvent {
     @JsonProperty("score")
     Integer score;
 
+    public GameEvent(){};
+
+    public GameEvent(String name,Integer score){
+        this.name = name;
+        this.score = score;
+    }
+
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }

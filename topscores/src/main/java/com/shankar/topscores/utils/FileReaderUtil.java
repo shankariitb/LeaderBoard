@@ -2,7 +2,6 @@ package com.shankar.topscores.utils;
 
 import com.shankar.topscores.domain.jpa.GameEvent;
 import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

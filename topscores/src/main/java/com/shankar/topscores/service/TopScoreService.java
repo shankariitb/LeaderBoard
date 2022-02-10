@@ -1,7 +1,6 @@
 package com.shankar.topscores.service;
 
 import com.shankar.topscores.domain.jpa.GameEvent;
-import com.shankar.topscores.domain.network.request.GameEventRequest;
 
 import java.util.List;
 

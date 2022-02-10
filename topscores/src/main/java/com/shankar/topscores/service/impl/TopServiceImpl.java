@@ -26,15 +26,15 @@ public class TopServiceImpl implements TopScoreService {
     private PersistentRepository persistentRepository;
 
     @Value("${topN.default}")
-    private Integer defaultN;
+    private  Integer defaultN;
 
     @Value("${topN.limit}")
-    private Integer limitN;
+    private  Integer limitN;
 
     @Override
     public List<GameEvent> getTopScore(Integer topN){
 
-        if(ObjectUtils.isEmpty(topN)) {
+        if(topN==null) {
             topN=defaultN;
         }
         if(topN>limitN){
