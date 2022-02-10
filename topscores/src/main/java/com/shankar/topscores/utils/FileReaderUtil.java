@@ -6,8 +6,12 @@ import org.springframework.util.ObjectUtils;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.temporal.TemporalField;
+import java.time.temporal.WeekFields;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class FileReaderUtil {
 
@@ -60,5 +64,11 @@ public class FileReaderUtil {
 
     public static boolean isValid(GameEvent gameEvent){
         return !ObjectUtils.isEmpty(gameEvent) && !ObjectUtils.isEmpty(gameEvent.getName()) && !ObjectUtils.isEmpty(gameEvent.getScore());
+    }
+
+    public static int getWeekOfTheYear(){
+        LocalDate localDate = LocalDate.now();
+        TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear();
+        return localDate.get(woy);
     }
 }

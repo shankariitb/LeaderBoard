@@ -12,6 +12,10 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * Configuration for Using JpaRepositories
+ **/
+
 @Configuration
 public class JpaConfiguration {
     public static final String DATASOURCE_PERSISTENT_WRITE = "dsPersistentWrite";
@@ -34,7 +38,7 @@ public class JpaConfiguration {
         vendorAdapter.setGenerateDdl(false);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         Properties hibernateProperties = new Properties();
-        hibernateProperties.put("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
+        hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         factory.setJpaProperties(hibernateProperties);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan(packagesToScan);

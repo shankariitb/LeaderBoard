@@ -12,9 +12,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 
+
+/**
+ * JDBC configuration for running SQL Queries
+ **/
 @Configuration
 public class SqlSourceConfig {
-    public static final String DATASOURCE_SCORE_WRITE ="dsScoreWrite";
+    public static final String DATASOURCE_SCORE_WRITE = "dsScoreWrite";
     public static final String JDBCTEMPLATE_SCORE_READ = "jdbcScoreWrite";
 
     @Value("${spring.write.datasource.type:#{null}}")

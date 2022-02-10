@@ -16,6 +16,9 @@ public class CronServiceImpl implements CronService {
     @Value("${redis.allTime.limit}")
     private Integer allTimeLimit;
 
+    /**
+     * Checks if the size got increased by more than allTimeLimit then it removes entries. Currently only AllTimeRepository can extend to All
+     */
     @Override
     public void runCron() {
         Long totalCount = factoryPatternUtil.getMethod(TimePeriod.ALL_TIME).getTotalCount();

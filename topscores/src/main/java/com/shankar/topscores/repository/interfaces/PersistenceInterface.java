@@ -1,4 +1,4 @@
-package com.shankar.topscores.repository.jdbc;
+package com.shankar.topscores.repository.interfaces;
 
 import com.shankar.topscores.domain.jpa.GameEvent;
 

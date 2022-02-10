@@ -10,9 +10,12 @@ import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
-
 import java.time.Duration;
 
+
+/**
+ * Lettuce Redis connection Client Configuration
+ **/
 @Configuration
 public class RedisConfiguration {
 
@@ -30,7 +33,7 @@ public class RedisConfiguration {
 
 
     @Bean
-    public StringRedisTemplate redisTemplate(LettuceConnectionFactory lettuceConnectionFactory){
+    public StringRedisTemplate redisTemplate(LettuceConnectionFactory lettuceConnectionFactory) {
         final StringRedisTemplate template = new StringRedisTemplate();
         template.setConnectionFactory(lettuceConnectionFactory);
         return template;

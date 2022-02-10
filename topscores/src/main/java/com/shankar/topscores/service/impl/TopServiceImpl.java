@@ -2,7 +2,6 @@ package com.shankar.topscores.service.impl;
 
 import com.shankar.topscores.domain.enums.TimePeriod;
 import com.shankar.topscores.domain.jpa.GameEvent;
-import com.shankar.topscores.domain.network.request.GameEventRequest;
 import com.shankar.topscores.repository.jdbc.PersistentRepository;
 import com.shankar.topscores.service.TopScoreService;
 import com.shankar.topscores.utils.FactoryPatternUtil;
@@ -12,9 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
