@@ -25,7 +25,7 @@ public class TopScoreController {
      * @param httpRequest Request Received
      * @return List of topN Players and their scores
      */
-    @RequestMapping(value = {"/getTopScores", "getTopScores/{N}"}, method = {RequestMethod.GET})
+    @RequestMapping(value = {"/getTopScores", "getTopScores/{topN}"}, method = {RequestMethod.GET})
     private List<GameEvent> getTopScores(@PathVariable(required = false) Integer topN, HttpServletRequest httpRequest) {
         return topScoreService.getTopScore(topN);
     }

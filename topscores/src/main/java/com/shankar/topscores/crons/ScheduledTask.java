@@ -19,8 +19,9 @@ public class ScheduledTask {
     private static final Logger logger = LoggerFactory.getLogger(ScheduledTask.class);
     private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
+    /**Cron to delete Extra Elements**/
 //    @Scheduled(cron = "0 10 1 * * ?")
-    @Scheduled(cron = "0 59 0 * * ?")
+    @Scheduled(cron = "0 42 12 * * ?")
     public void scheduleTaskWithCronExpression() {
         cronService.runCron();
         logger.info("Cron Task for Deletion ran :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
